@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canto Bar de Parrilla - Link Bio</title>
+    <meta name="description" content="Canto Bar de Parrilla - Autêntica Parrilla Uruguaia e Argentina. Cardápio, reservas e mais.">
+    <meta property="og:title" content="Canto Bar de Parrilla">
+    <meta property="og:description" content="Autêntica Parrilla Uruguaia e Argentina">
+    <meta property="og:image" content="https://www.cantobardeparrilla.com.br/logo.jpg">
+    <meta property="og:url" content="https://www.cantobardeparrilla.com.br/">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Fundo com overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23111" width="1920" height="1080"/><path fill="%23222" d="M0,540L48,520C96,500,192,460,288,460C384,460,480,500,576,520C672,540,768,540,864,520C960,500,1056,460,1152,460C1248,460,1344,500,1440,520C1536,540,1632,540,1728,520C1824,500,1872,490,1920,480L1920,1080L1872,1080C1824,1080,1728,1080,1632,1080C1536,1080,1440,1080,1344,1080C1248,1080,1152,1080,1056,1080C960,1080,864,1080,768,1080C672,1080,576,1080,480,1080C384,1080,288,1080,192,1080C96,1080,48,1080,0,1080Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Logo */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #943742;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(148, 55, 66, 0.5);
+        }
+
+        /* Título e Subtítulo */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #FFD700;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .header .divider {
+            width: 60px;
+            height: 3px;
+            background: #FFD700;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Botões */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            padding: 18px 30px;
+            background: #943742;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(148, 55, 66, 0.4);
+            background: #7a2e36;
+        }
+
+        .link-btn.whatsapp {
+            background: #25D366;
+        }
+
+        .link-btn.whatsapp:hover {
+            background: #1fa855;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .link-btn i {
+            font-size: 1.2rem;
+            margin-right: 15px;
+            width: 25px;
+            text-align: center;
+        }
+
+        /* Informações */
+        .info-section {
+            background: rgba(33, 33, 33, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-item h3 {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-item p {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Redes Sociais */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-link:hover {
+            background: #943742;
+            transform: translateY(-3px);
+            border-color: #943742;
+        }
+
+        .social-link i {
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header .subtitle {
+                font-size: 1rem;
+            }
+
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .link-btn {
+                padding: 15px 25px;
+                font-size: 0.95rem;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-container,
+        .header,
+        .links,
+        .info-section,
+        .social-links,
+        .footer {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .header { animation-delay: 0.1s; }
+        .links { animation-delay: 0.2s; }
+        .info-section { animation-delay: 0.3s; }
+        .social-links { animation-delay: 0.4s; }
+        .footer { animation-delay: 0.5s; }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+        // DataLayer
+        window.dataLayer = window.dataLayer || [];
+        
+        // Função para enviar eventos
+        function trackClick(eventLabel) {
+            dataLayer.push({
+                'event': 'lead',
+                'event_category': 'Link Bio',
+                'event_action': 'Click',
+                'event_label': eventLabel
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Canto Bar de Parrilla" class="logo">
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Canto Bar de Parrilla</h1>
+            <p class="subtitle">Autêntica Parrilla Uruguaia e Argentina</p>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Links -->
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1zeSDa-Lwpo2_E4cSLWxhNaILzp1D6PaH/view?usp=drive_link" 
+               class="link-btn" 
+               target="_blank"
+               onclick="trackClick('Cardápio Completo')"
+               aria-label="Ver cardápio completo">
+                <i class="fas fa-utensils"></i>
+                Cardápio completo
+            </a>
+
+            <a href="https://drive.google.com/file/d/1c2iqjFumn59xYfNNzbyLsOY5_4DJx5ZH/view?usp=drive_link" 
+               class="link-btn" 
+               target="_blank"
+               onclick="trackClick('Menu Almoço')"
+               aria-label="Ver menu de almoço">
+                <i class="fas fa-list-alt"></i>
+                Menu almoço
+            </a>
+
+            <a href="https://reservation-widget.tagme.com.br/smartlink/6643c6f7fe872f00556e7460" 
+               class="link-btn" 
+               target="_blank"
+               onclick="trackClick('Fazer Reserva')"
+               aria-label="Fazer reserva">
+                <i class="fas fa-calendar-check"></i>
+                Faça sua reserva
+            </a>
+
+            <a href="https://wa.me/554191683897?text=Ol%C3%A1%20Canto,%20acabei%20de%20ver%20sua%20bio.%20Me%20tira%20uma%20d%C3%BAvida?" 
+               class="link-btn whatsapp" 
+               target="_blank"
+               onclick="trackClick('WhatsApp')"
+               aria-label="Falar no WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+                Fale conosco
+            </a>
+        </div>
+
+        <!-- Informações -->
+        <div class="info-section">
+            <div class="info-item">
+                <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+                <p>Alameda Prudente de Moraes, 1069 – Centro, Curitiba</p>
+            </div>
+
+            <div class="info-item">
+                <h3><i class="fas fa-clock" style="color: #FFD700;"></i> Horário de funcionamento</h3>
+                <p>
+                    <strong>Terça a sábado:</strong> 11h30 às 00h<br>
+                    <strong>Domingo:</strong> 11h30 às 16h
+                </p>
+            </div>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/cantobardeparrilla/" 
+               class="social-link" 
+               target="_blank"
+               onclick="trackClick('Instagram')"
+               aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@cantobardeparrilla" 
+               class="social-link" 
+               target="_blank"
+               onclick="trackClick('TikTok')"
+               aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@Canto-BardeParrilla-io8ls" 
+               class="social-link" 
+               target="_blank"
+               onclick="trackClick('YouTube')"
+               aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/company/canto-bar-de-parrilla/" 
+               class="social-link" 
+               target="_blank"
+               onclick="trackClick('LinkedIn')"
+               aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://www.facebook.com/canto.bardeparrilla" 
+               class="social-link" 
+               target="_blank"
+               onclick="trackClick('Facebook')"
+               aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://maps.google.com/?q=Alameda+Prudente+de+Moraes+1069+Centro+Curitiba" 
+               class="social-link" 
+               target="_blank"
+               onclick="trackClick('Google Maps')"
+               aria-label="Google Maps">
+                <i class="fas fa-map-marked-alt"></i>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; <span id="currentYear"></span> Canto Bar de Parrilla. Todos os direitos reservados.</p>
+        </div>
+    </div>
+
+    <script>
+        // Atualizar ano automaticamente
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

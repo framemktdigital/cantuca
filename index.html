@@ -51,8 +51,8 @@
     <meta name="apple-mobile-web-app-title" content="Cantuca Bar">
     <meta name="application-name" content="Cantuca Brasero & Bar">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#77222d">
-    <meta name="msapplication-TileColor" content="#77222d">
+    <meta name="theme-color" content="#943742">
+    <meta name="msapplication-TileColor" content="#943742">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="https://www.cantucabrasero.com.br/logo.png">
@@ -169,9 +169,9 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #77222d;
+            border: 3px solid #943742;
             object-fit: cover;
-            box-shadow: 0 0 20px rgba(119, 34, 45, 0.5);
+            box-shadow: 0 0 20px rgba(148, 55, 66, 0.5);
             background-color: #fff;
         }
 
@@ -190,7 +190,7 @@
 
         .header .subtitle {
             font-size: 1.1rem;
-            color: #d2cdbe;
+            color: #FFD700;
             font-weight: 400;
             margin-bottom: 15px;
         }
@@ -198,7 +198,7 @@
         .header .divider {
             width: 60px;
             height: 3px;
-            background: #a56f4c;
+            background: #FFD700;
             margin: 0 auto;
             border-radius: 2px;
         }
@@ -215,7 +215,7 @@
             display: flex;
             align-items: center;
             padding: 18px 30px;
-            background: #77222d;
+            background: #943742;
             color: #fff;
             text-decoration: none;
             border-radius: 30px;
@@ -230,8 +230,8 @@
 
         .link-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(119, 34, 45, 0.4);
-            background: #5a1a22;
+            box-shadow: 0 6px 20px rgba(148, 55, 66, 0.4);
+            background: #7a2e36;
         }
 
         .link-btn.whatsapp {
@@ -408,44 +408,34 @@
 
         <!-- Links -->
         <nav class="links" role="navigation" aria-label="Links principais">
-            <a href="http://wa.me/5541991683897"
-               class="link-btn whatsapp"
-               target="_blank"
-               rel="noopener noreferrer"
-               onclick="trackClick('WhatsApp')"
-               aria-label="Falar conosco via WhatsApp">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                Nosso WhatsApp
-            </a>
-
             <a href="cardapio-completo.pdf"
                class="link-btn"
                target="_blank"
                rel="noopener noreferrer"
-               onclick="trackClick('Cardápio')"
+               onclick="trackClick('Cardápio Completo')"
                aria-label="Ver cardápio completo do Cantuca Brasero & Bar">
                 <i class="fas fa-utensils" aria-hidden="true"></i>
-                Cardápio Completo
+                Cardápio completo
             </a>
 
             <a href="https://usetag.me/cantucabraserobar"
                class="link-btn"
                target="_blank"
                rel="noopener noreferrer"
-               onclick="trackClick('Reserva')"
+               onclick="trackClick('Fazer Reserva')"
                aria-label="Fazer reserva no Cantuca Brasero & Bar">
                 <i class="fas fa-calendar-check" aria-hidden="true"></i>
-                Fazer Reserva
+                Faça sua reserva
             </a>
 
-            <a href="https://www.google.com/maps/dir/?api=1&destination=R.+Saldanha+Marinho,+2031+-+Bigorrilho,+Curitiba+-+PR"
-               class="link-btn"
+            <a href="https://wa.me/5541991683897?text=Ol%C3%A1%20Cantuca,%20acabei%20de%20ver%20sua%20bio.%20Me%20tira%20uma%20d%C3%BAvida?"
+               class="link-btn whatsapp"
                target="_blank"
                rel="noopener noreferrer"
-               onclick="trackClick('Como Chegar')"
-               aria-label="Como chegar ao Cantuca Brasero & Bar">
-                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                Como chegar
+               onclick="trackClick('WhatsApp')"
+               aria-label="Falar conosco via WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                Fale conosco
             </a>
         </nav>
 

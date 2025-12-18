@@ -1,14 +1,14 @@
-# Link Bio - Canto Bar de Parrilla
+# Link Bio - Cantuca Brasero & Bar
 
-![Canto Bar de Parrilla](logo.jpg)
+![Cantuca Brasero & Bar](logo.png)
 
 ## 🔗 Sobre
 
-Link bio moderno e responsivo para o Canto Bar de Parrilla, restaurante especializado em autêntica parrilla uruguaia e argentina localizado em Curitiba.
+Link bio moderno e responsivo para o Cantuca Brasero & Bar, estabelecimento localizado em Curitiba especializado em experiências únicas de bar e brasero.
 
 ## ✨ Características
 
-- 🎨 **Design Moderno**: Interface escura com elementos dourados (#FFD700) e vinho (#943742)
+- 🎨 **Design Moderno**: Interface escura com paleta de cores terrosas (#77222d, #a56f4c, #d2cdbe)
 - 📱 **Totalmente Responsivo**: Otimizado para todos os dispositivos
 - 🚀 **Performance**: HTML puro, sem dependências externas pesadas
 - 📊 **Analytics Ready**: Eventos dataLayer configurados para Google Tag Manager
@@ -26,22 +26,8 @@ Link bio moderno e responsivo para o Canto Bar de Parrilla, restaurante especial
 ## 📋 Funcionalidades
 
 ### Botões de Ação
-- 🍽️ Cardápio completo
-- 📃 Menu de almoço
-- 📅 Sistema de reservas
-- 💬 WhatsApp direto
-
-### Informações
-- 📍 Endereço completo
-- 🕐 Horários de funcionamento
-
-### Redes Sociais
-- Instagram
-- TikTok
-- YouTube
-- LinkedIn
-- Facebook
-- Google Maps
+- 💬 Nosso WhatsApp - Contato direto via WhatsApp
+- 📍 Como chegar - Direções via Google Maps
 
 ## 📊 Tracking
 
@@ -58,26 +44,47 @@ Todos os cliques geram eventos no dataLayer:
 ## 🚀 Como Usar
 
 1. Clone o repositório
-2. Adicione a logo.jpg no diretório raiz
+2. A logo.png já está incluída no diretório raiz
 3. Configure o Google Tag Manager (opcional)
-4. Hospede os arquivos no servidor
+4. Hospede os arquivos no servidor (recomendado: Vercel)
 
 ## 📱 Responsividade
 
 - Desktop: Layout completo com todos os elementos
 - Mobile (<768px): Ajustes de tamanho e espaçamento
 
-## 🎨 Cores
+## 🎨 Paleta de Cores
 
-- Fundo: #000000 (preto)
-- Texto: #FFFFFF (branco)
-- Destaque: #FFD700 (dourado)
-- Botões: #943742 (vinho)
-- WhatsApp: #25D366 (verde)
+- **#77222d** - Vermelho escuro/vinho (botões principais)
+- **#a56f4c** - Marrom/bronze (destaques e divisores)
+- **#d2cdbe** - Bege claro (subtítulos)
+- **#000000** - Preto (fundo)
+- **#FFFFFF** - Branco (texto)
+- **#25D366** - Verde WhatsApp (botão WhatsApp)
+
+## 📍 Localização
+
+Seu Saldanha - Bar em Curitiba
+- Latitude: -25.4360339
+- Longitude: -49.2931148
+
+## 📞 Contato
+
+- WhatsApp: +55 (41) 99168-3897
+
+## 🚀 Deploy
+
+### Vercel (Recomendado)
+```bash
+vercel --prod
+```
+
+### Hostinger via rsync
+Consulte INSTALACAO.md para instruções detalhadas
 
 ## 📝 Licença
 
-© 2025 Canto Bar de Parrilla. Todos os direitos reservados.
+© 2025 Cantuca Brasero & Bar. Todos os direitos reservados.
 
 ---
 

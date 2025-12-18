@@ -83,9 +83,10 @@
         "telephone": "+5541991683897",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Seu Saldanha",
+            "streetAddress": "R. Saldanha Marinho, 2031",
             "addressLocality": "Curitiba",
             "addressRegion": "PR",
+            "postalCode": "80730-180",
             "addressCountry": "BR"
         },
         "geo": {
@@ -93,8 +94,29 @@
             "latitude": -25.4360339,
             "longitude": -49.2931148
         },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+                "opens": "12:00",
+                "closes": "23:30"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Friday", "Saturday"],
+                "opens": "12:00",
+                "closes": "00:30"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "12:00",
+                "closes": "19:00"
+            }
+        ],
         "servesCuisine": ["Bar", "Brasero"],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "acceptsReservations": "True"
     }
     </script>
     
@@ -415,7 +437,7 @@
                 Fazer Reserva
             </a>
 
-            <a href="https://www.google.com/maps/dir/?api=1&destination=Seu+Saldanha+-+Bar+em+Curitiba+-25.4360339,-49.2931148,17"
+            <a href="https://www.google.com/maps/dir/?api=1&destination=R.+Saldanha+Marinho,+2031+-+Bigorrilho,+Curitiba+-+PR"
                class="link-btn"
                target="_blank"
                rel="noopener noreferrer"
@@ -425,6 +447,26 @@
                 Como chegar
             </a>
         </nav>
+
+        <!-- Informações -->
+        <section class="info-section" aria-label="Informações do restaurante">
+            <div class="info-item">
+                <h3><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Endereço</h3>
+                <address>
+                    <p>R. Saldanha Marinho, 2031 – Bigorrilho, Curitiba - PR</p>
+                </address>
+            </div>
+
+            <div class="info-item">
+                <h3><i class="fas fa-clock" aria-hidden="true"></i> Horário de funcionamento</h3>
+                <p>
+                    <strong>Terça a quinta:</strong> 12h às 23h30<br>
+                    <strong>Sexta e sábado:</strong> 12h às 00h30<br>
+                    <strong>Domingo:</strong> 12h às 19h<br>
+                    <strong>Segunda:</strong> Fechado
+                </p>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer class="footer">
